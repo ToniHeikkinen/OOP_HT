@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFEB3B"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/moveTrainingBtn"
+        android:layout_width="166dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="moveFromTraining"
+        android:text="Siirrä treeniareenalla olevia lutemoneja"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moveHomeBtn" />
+
+    <Button
+        android:id="@+id/moveHomeBtn"
+        android:layout_width="166dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="moveFromHome"
+        android:text="Siirrä kotona olevia lutemoneja"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createLutemonBtn" />
+
+    <Button
+        android:id="@+id/createLutemonBtn"
+        android:layout_width="166dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="addLutemon"
+        android:text="Luo uusi lutemon"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewOutput"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="600dp"
+        android:autoText="false"
+        android:fontFamily="sans-serif"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editnameTxt"
+        android:layout_width="193dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Anna lutemonin nimi"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lutemonHeader" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="-180dp"
+        android:layout_marginTop="130dp"
+        android:checkedButton="@+id/button_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/button_1"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:text="Valkoinen" />
+
+
+        <RadioButton
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vihreä" />
+
+        <RadioButton
+            android:id="@+id/button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pinkki" />
+
+        <RadioButton
+            android:id="@+id/button_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oranssi" />
+
+        <RadioButton
+            android:id="@+id/button_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Musta" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/lutemonHeader"
+        android:layout_width="153dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Luo uusi lutemon!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
